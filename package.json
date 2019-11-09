@@ -4,11 +4,15 @@
   "description": "bill module for tomatobang",
   "private": true,
   "egg": {
-    "declarations": true
+    "declarations": true,
+    "typescript": true
   },
   "dependencies": {
+    "consul": "^0.36.0",
     "egg": "^2.15.1",
-    "egg-scripts": "^2.11.0"
+    "egg-mongoose": "^2.1.1",
+    "egg-scripts": "^2.11.0",
+    "egg-validate": "^2.0.2"
   },
   "devDependencies": {
     "autod": "^3.0.1",
