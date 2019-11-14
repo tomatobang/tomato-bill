@@ -26,7 +26,7 @@ export default () => {
 
   config.cluster = {
     listen: {
-      port: 8001,
+      port: 8004,
     },
   };
 
@@ -46,7 +46,7 @@ export default () => {
         }
       },
       server: {
-        name: 'tomato-server', // project name, default project name
+        name: 'tomato-bill', // project name, default project name
         // service ip, default extranet ip
         // address: '', 
         // service port, default service port
@@ -85,12 +85,14 @@ export default () => {
   };
 
   config.mongoose = {
-    url: 'mongodb://127.0.0.1:27017/tomatobang',
+    url: 'mongodb://127.0.0.1:27017/tomato-bill',
     options: {},
   };
 
-  config.serverPort = {
-    serverPort: env.serverPort || 3000,
+  config.token = {
+    tokenSecret: env.tokenSecret || 'tomatobang',
+    tokenExpiresIn: env.tokenExpiresIn || '3d',
   };
+ 
   return config;
 };
