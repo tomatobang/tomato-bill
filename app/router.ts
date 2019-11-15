@@ -30,4 +30,13 @@ export default (app: Application) => {
   router.del('/api/asset/:id', controller.asset.deleteById);
   router.post('/api/asset/:id', controller.asset.updateById);
 
+  /**
+  * 标签
+  */
+ router.get('/api/tag', controller.tag.list);
+ router.get('/api/tag/:id', controller.tag.findById);
+ router.post('/api/tag', controller.tag.create);
+ router.del('/api/tag/:id', controller.tag.deleteById);
+ router.post('/api/tag/:id', controller.tag.updateById);
+
 };
