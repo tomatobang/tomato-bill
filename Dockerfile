@@ -15,6 +15,6 @@ RUN npm install --registry=https://registry.npm.taobao.org
 COPY . /home/tomato-bill
 RUN npm run tsc
 # 暴露端口给宿主机
-EXPOSE 10002
+EXPOSE 10004
 # 容器启动时执行的命令，启动应用
 CMD npm start

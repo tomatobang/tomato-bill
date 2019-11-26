@@ -29,7 +29,7 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=tomato-bill",
+    "start": "egg-scripts start --title=tomato-bill",
     "stop": "egg-scripts stop --title=tomato-bill",
     "dev": "egg-bin dev",
     "tsc": "ets && tsc -p tsconfig.json",
