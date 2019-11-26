@@ -19,8 +19,16 @@ exports.static = {
   maxAge: 31536000,
 };
 
-
 exports.mongoose = {
   url: 'mongodb://' + env.DATABASE_MONGODB_USERNAME_PASSWORD + '@' + env.DATABASE_MONGODB_HOST_PORT + '/tomato-bill',
   options: {},
+};
+
+exports.redis = {
+  client: {
+    port: env.REDIS_PORT || 6379,
+    host: env.REDIS_HOST || '127.0.0.1',
+    password: env.REDIS_PASSWORD || '',
+    db: 0,
+  }
 };

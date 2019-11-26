@@ -26,7 +26,7 @@ export default () => {
 
   config.cluster = {
     listen: {
-      port: 8004,
+      port: 10004,
     },
   };
 
@@ -87,6 +87,15 @@ export default () => {
   config.mongoose = {
     url: 'mongodb://127.0.0.1:27017/tomato-bill',
     options: {},
+  };
+
+  config.redis = {
+    client: {
+      port: 6379,
+      host: '127.0.0.1',
+      password: '',
+      db: 0,
+    },
   };
 
   config.token = {
